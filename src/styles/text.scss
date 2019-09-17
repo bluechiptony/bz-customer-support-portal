@@ -1,0 +1,90 @@
+@import "colors";
+body {
+  font-family: "Mukta", "Montserrat", sans-serif;
+  color: #2d2d2d;
+}
+
+.center-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.right-text {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+.left-text {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+}
+
+.link-up {
+  cursor: pointer;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.login-notice {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.ticket-prompt {
+  font-size: 12px;
+}
+.ticket-number {
+  font-size: 22px;
+}
+
+.ticket-subtitle {
+  font-size: 12px;
+}
+.ticket-text {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.ticket-title {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 0.9em;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  color: $primary;
+}
+.modal-heading {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.3em;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  color: $primary;
+}
+.ticket-exerpt {
+  font-size: 1.1em;
+}
+
+.form-prompt {
+  font-weight: bold;
+  font-size: 13px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.loading-mega {
+  font-size: 4em;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #2d2d2d41;
+  padding: 20px;
+}
+
+.loading-sub {
+  font-size: 2.5em;
+  padding: 10px;
+}

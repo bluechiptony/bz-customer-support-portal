@@ -1,0 +1,14 @@
+$primary: #1b4d56;
+$primaryRed: #cb240a;
+$primary2: #1b4d5664;
+
+.background-main {
+  background-color: #1b4d56;
+}
+.background-red {
+  background-color: $primaryRed;
+}
+
+.text-whoite {
+  color: rgba(255, 255, 255, 0.8);
+}
