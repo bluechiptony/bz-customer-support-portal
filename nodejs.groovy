@@ -3,7 +3,7 @@
 
 job("reack-docker-build-and-publish"){
     scm{
-        git('https://anthony.egwu:B133@desk$@anthony-egwu@bitbucket.org/anthony-egwu/bizzdesk-customer-support-portal.git', 'master'){
+        git('git@bitbucket.org/anthony-egwu/bizzdesk-customer-support-portal.git', ){
             node / gitConfigName("Seed DSL User")
             node / gitConfigUser("tony5egwu@gmail.com")
         }
