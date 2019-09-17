@@ -21,19 +21,25 @@ import { Constants } from "../../App";
 //   );
 // };
 
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+);
+const phoneRegex = RegExp(/^\d{4}\d{3}\d{4}$/);
+
 class LoginBox extends Component {
   state = {
     emailAddress: "",
-    password: ""
+    password: "",
+    formErrors: {}
   };
   errors = {};
   constructor(props) {
     super(props);
-    this.state = { emailAddress: "", password: "" };
+    this.state = { emailAddress: "", password: "", formErrors: {} };
   }
   componentDidMount = prevProps => {
     this.setState({
-      errors: this.errors,
+      formErrors: {},
       emailAddress: "",
       password: "",
       loading: false
@@ -77,7 +83,22 @@ class LoginBox extends Component {
 
   validateForm = event => {
     const { name, value } = event.target;
+
     this.setState({ [name]: value });
+    switch (name) {
+      case "emailAddress":
+        this.errors.emailAddress = !emailRegex.test(value) ? "Please enter a valid email address" : "";
+        break;
+      case "password":
+        this.errors.password = value.length < 6 && value.length > 0 ? "Please enter a " : "";
+        break;
+      default:
+        break;
+    }
+
+    this.setState({
+      formErrors: this.errors
+    });
   };
 
   render = () => {
