@@ -4,8 +4,8 @@
 job("reack-docker-build-and-publish"){
     scm{
         git('git://github.com/bluechiptony/bz-customer-support-portal.git' ){
-            node / gitConfigName("Seed DSL User")
-            node / gitConfigUser("tony5egwu@gmail.com")
+            node / gitConfigName("Anthony Egwu")
+            node / gitConfigEmail("tony5egwu@gmail.com")
         }
 
     }
