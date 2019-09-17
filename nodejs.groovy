@@ -1,7 +1,7 @@
 
 // git clone https://anthony-egwu@bitbucket.org/anthony-egwu/bizzdesk-customer-support-portal.git
 
-job("node-docker-build-and publish"){
+job("reack-docker-build-and-publish"){
     scm{
         git('https://anthony-egwu@bitbucket.org/anthony-egwu/bizzdesk-customer-support-portal.git'){
             node / gitConfigName("Seed DSL User")
